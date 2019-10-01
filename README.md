@@ -1,2 +1,2 @@
-# test
+# connection test
 Test GitHub
