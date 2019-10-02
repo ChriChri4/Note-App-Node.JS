@@ -44,7 +44,17 @@ const loadNotes = function() {
 
 }
 
+const removeNotes = function(title){
+    const notes = loadNotes()
+    const notesToKeep = notes.filter(function(note) {
+        return note.title !== title //ritorna vero o falso controllando tutti i campi title
+    });
+    saveNotes(notesToKeep);
+    console.log('Note deleted!');
+}
+
 module.exports = {
     getNote: getNote,
-    addNote: addNote  
+    addNote: addNote,
+    removeNotes: removeNotes
 };
